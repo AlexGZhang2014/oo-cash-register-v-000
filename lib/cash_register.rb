@@ -5,13 +5,14 @@ class CashRegister
     @all_items = []
   end
   
-  attr_accessor :total, :discount, :
+  attr_accessor :total, :discount, :last_transaction
   
   def add_item(item, price, quantity = 1)
     quantity.times do
       @all_items << item
     end
-    @total += price * quantity
+    @last_transaction = price * quantity
+    @total += @last_transaction
   end
   
   def apply_discount
