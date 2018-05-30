@@ -5,6 +5,6 @@ class CashRegister
     
   end
   
-  attr_accessor :total
+  attr_accessor :total, :discount
   
 end
